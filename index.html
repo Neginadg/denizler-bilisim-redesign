@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Denizler Bilişim Hizmetleri Ltd. | Dönüşüm Sizinle Başlar</title>
+<meta name="description" content="Denizler Bilişim Hizmetleri Ltd. — Kıbrıs genelinde marka bağımsız BT hizmetleri: elektronik doküman yönetimi, ağ ve güvenlik danışmanlığı, e-imza KIBRIS ve kurumsal sistemler danışmanlığı.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo.png" alt="Denizler Bilişim" class="brand-logo">
+    </a>
+
+    <!-- Nav targets below (hakkimizda.html, hizmetlerimiz.html, ik.html, iletisim.html) are placeholder
+         routes for pages to be built in later phases. They intentionally 404 for now. -->
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html" class="active">Anasayfa</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+        <li><a href="ik.html">İK</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="iletisim.html" class="btn btn-primary btn-sm">İletişime Geçin</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <!-- Akış (flow) motif: layered gradient ribbons + soft glow orbs + a faint
+           dot-grid, standing in for a future commissioned illustration or
+           photography. Safe to replace wholesale. -->
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+      <div class="hero-glow glow-3"></div>
+      <div class="hero-dotgrid"></div>
+      <svg class="flow-lines" viewBox="0 0 1200 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="flowA" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#00AEEF" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#88CCED" stop-opacity="0.05"/>
+          </linearGradient>
+          <linearGradient id="flowB" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#88CCED" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#00AEEF" stop-opacity="0.02"/>
+          </linearGradient>
+        </defs>
+        <path class="flow-path flow-path-1" d="M-100,220 C150,120 300,340 550,260 C800,180 950,360 1300,240 L1300,800 L-100,800 Z" fill="url(#flowA)"/>
+        <path class="flow-path flow-path-2" d="M-100,420 C200,320 380,520 650,420 C920,320 1050,480 1300,400 L1300,800 L-100,800 Z" fill="url(#flowB)"/>
+      </svg>
+    </div>
+
+    <!-- placeholder image: swap this abstract chip cluster for a commissioned
+         illustration or modern stock/AI photo representing document workflow,
+         network security and digital signing — nothing generic/clip-art. -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="flow-chip chip-1">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="#00AEEF" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12h6M9 16h6" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span>Doküman Yönetimi</span>
+      </div>
+      <div class="flow-chip chip-2">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Z" stroke="#26386B" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12.5l2 2 4-5" stroke="#26386B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Güvenli İmzalama</span>
+      </div>
+      <div class="flow-chip chip-3">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#00AEEF" stroke-width="1.6"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2M6.3 6.3l1.4 1.4M16.3 16.3l1.4 1.4M6.3 17.7l1.4-1.4M16.3 7.7l1.4-1.4" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span>Ağ ve Güvenlik</span>
+      </div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">Kıbrıs Genelinde Marka Bağımsız BT Hizmetleri</span>
+        <h1>Dönüşüm<br><span class="text-gradient">sizinle başlar.</span></h1>
+        <p>Kıbrıs genelindeki yaygın hizmet ağımız ve deneyimli hizmet ekiplerimizle, tüm BT
+           hizmetlerini tek noktadan sunuyoruz.</p>
+        <div class="hero-actions">
+          <a href="hizmetlerimiz.html" class="btn btn-primary">Hizmetlerimizi İnceleyin</a>
+          <a href="iletisim.html" class="btn btn-ghost">Bize Ulaşın</a>
+        </div>
+      </div>
+    </div>
+
+    <svg class="hero-divider" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 30C280 90 500 10 760 40C1020 70 1220 20 1440 50V100H0V30Z" fill="#FBFDFE"/>
+    </svg>
+  </section>
+
+  <!-- ===== SERVICES TEASER ===== -->
+  <section class="section" id="hizmetler">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="tag">Hizmetlerimiz</span>
+        <h2>BT hizmetlerinizi tek noktadan yönetin</h2>
+        <p>Markadan bağımsız yaklaşımımızla, ihtiyacınıza uygun teknolojiyi seçip uçtan uca uyguluyoruz.</p>
+      </div>
+
+      <div class="grid grid-4">
+        <article class="service-card" data-reveal>
+          <div class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="#00AEEF" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12h6M9 16h6" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Elektronik Doküman ve İş Akışı Çözümleri</h3>
+          <p>Belgelerinizi dijitalleştirin, iş akışlarını uçtan uca yönetin ve elektronik arşivleme ile süreçlerinizi hızlandırın.</p>
+          <a href="hizmetlerimiz.html" class="card-link">Detaylı Bilgi
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+
+        <article class="service-card" data-reveal>
+          <div class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#00AEEF" stroke-width="1.6"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2M6.3 6.3l1.4 1.4M16.3 16.3l1.4 1.4M6.3 17.7l1.4-1.4M16.3 7.7l1.4-1.4" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Ağ ve Güvenlik Danışmanlığı</h3>
+          <p>Kurumunuzun ağ altyapısını ve bilgi güvenliğini uçtan uca değerlendirip güçlendiriyoruz.</p>
+          <a href="hizmetlerimiz.html" class="card-link">Detaylı Bilgi
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+
+        <article class="service-card" data-reveal>
+          <div class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Z" stroke="#00AEEF" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12.5l2 2 4-5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>e-imza KIBRIS</h3>
+          <p>e-imza, zaman damgası, e-imza yazılım kütüphaneleri ve İmzaYeri KIBRIS online imzalama &amp; arşiv platformu ile güvenli dijital imzalama.</p>
+          <a href="hizmetlerimiz.html" class="card-link">Detaylı Bilgi
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+
+        <article class="service-card" data-reveal>
+          <div class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="#00AEEF" stroke-width="1.6"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Kurumsal Sistemler Danışmanlığı</h3>
+          <p>İşletmenizin ihtiyaçlarına özel, markadan bağımsız kurumsal sistem çözümleri için yanınızdayız.</p>
+          <a href="hizmetlerimiz.html" class="card-link">Detaylı Bilgi
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT TEASER ===== -->
+  <section class="section section-alt" id="hakkimizda">
+    <div class="container about-grid">
+      <!-- placeholder image: provided by client (Negin), 2026-09-10 — stock photo,
+           team reviewing a dashboard. Swap for real team/office photography when available. -->
+      <div class="about-visual" data-reveal>
+        <img src="assets/img/about/team-workspace.png" alt="Denizler Bilişim ekibi çalışma ortamında">
+      </div>
+
+      <div class="about-copy" data-reveal>
+        <span class="tag">Hakkımızda</span>
+        <h2>Denizler Bilişim Hizmetleri Ltd.</h2>
+        <p>Bilgi teknolojilerinde marka bağımsız hizmet çözümleri sunan bir kuruluşuz. Kıbrıs'ta lider bir BT hizmet sağlayıcısı olmayı hedefliyoruz.</p>
+        <a href="hakkimizda.html" class="link-arrow">Daha Fazlası
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLIENT TRUST STRIP ===== -->
+  <section class="trust-strip" id="referanslar" data-reveal>
+    <div class="container">
+      <p class="trust-label">Bize Güvenen Kurumlar</p>
+      <div class="trust-logos">
+        <img src="assets/img/references/bthk.jpg" alt="BTHK">
+        <img src="assets/img/references/dau.jpg" alt="DAÜ">
+        <img src="assets/img/references/eimzakibris.jpg" alt="e-imza KIBRIS">
+        <img src="assets/img/references/ciu.jpg" alt="Kıbrıs Uluslararası Üniversitesi (CIU)">
+        <img src="assets/img/references/kktcell.jpg" alt="KKTCELL">
+        <img src="assets/img/references/vodafone.jpg" alt="Vodafone">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEADERSHIP PULL-QUOTE ===== -->
+  <section class="quote-section">
+    <div class="container quote-inner" data-reveal>
+      <svg class="quote-mark" viewBox="0 0 48 36" fill="none" aria-hidden="true"><path d="M0 36V21.6C0 9.6 7.2 1.8 18 0l1.8 5.4C13.2 7.2 9.6 11.4 9.6 16.8H18V36H0ZM28.2 36V21.6C28.2 9.6 35.4 1.8 46.2 0L48 5.4c-6.6 1.8-10.2 6-10.2 11.4h8.4V36H28.2Z" fill="#88CCED"/></svg>
+      <p class="quote-text">Sizin iş yetkinliğiniz ile bizim teknoloji yetkinliğimizin birleşimi, dönüşen bir dünyada farklılaşmayı sağlıyor.</p>
+      <span class="quote-name">Lisani Deniz</span>
+      <span class="quote-role">Kurucu, Denizler Bilişim</span>
+    </div>
+  </section>
+
+  <!-- ===== NEWS TEASER ===== -->
+  <section class="section" id="haberler">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="tag">Güncel Haberler</span>
+        <h2>Bizden Son Gelişmeler</h2>
+        <p class="sample-note">Aşağıdaki haberler örnek içeriktir; yayın öncesi içerik ve tarihler onaylanacaktır.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- image: client-provided, real ISO 27001 certification graphic (sample content, pending confirmation) -->
+        <article class="news-card" data-reveal>
+          <span class="sample-badge">Örnek İçerik</span>
+          <div class="news-thumb news-thumb-a">
+            <img src="assets/img/news/proks-27001.png" alt="ISO/IEC 27001 Proks Sertifikası">
+          </div>
+          <span class="news-date">Tarih onay bekliyor</span>
+          <h3>ISO 27001 Sertifikası Yenilendi</h3>
+          <p>Bilgi güvenliği yönetim sistemi sertifikamızın yenilendiğine dair örnek haber içeriği.</p>
+        </article>
+
+        <!-- image: client-provided, real e-Vize approval graphic (sample content, pending confirmation) -->
+        <article class="news-card" data-reveal>
+          <span class="sample-badge">Örnek İçerik</span>
+          <div class="news-thumb news-thumb-b">
+            <img src="assets/img/news/elektrik_e_vize.jpg" alt="e-Vize Onay">
+          </div>
+          <span class="news-date">Tarih onay bekliyor</span>
+          <h3>e-Vize Sistemi Geçişleri</h3>
+          <p>Meslek odaları için elektronik vize süreçlerine geçişe dair örnek haber içeriği.</p>
+        </article>
+
+        <article class="news-card news-card-soon" data-reveal>
+          <div class="news-thumb news-thumb-c" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 6v12M6 12h12" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Yakında</h3>
+          <p>Yeni haberlerimiz ve gelişmelerimiz için bizi takip etmeye devam edin.</p>
+        </article>
+      </div>
+
+      <div class="all-news-wrap" data-reveal>
+        <a href="haberler.html" class="btn btn-outline">Tüm Haberler</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <img src="assets/img/logo.png" alt="Denizler Bilişim" class="footer-logo">
+      <p>Bilgi teknolojilerinde marka bağımsız hizmet çözümleri sunan bir kuruluşuz. Kıbrıs'ta lider bir BT hizmet sağlayıcısı olmayı hedefliyoruz.</p>
+      <div class="social-row">
+        <a href="https://www.linkedin.com/company/denizler-bili%C5%9Fim-hizmetleri-ltd-/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7.5 10v6.5M7.5 7.5v.01M12 16.5V13c0-1.4.9-2.3 2.2-2.3s2.1.9 2.1 2.3v3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a href="https://www.facebook.com/denizlerbilisim/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></a>
+        <a href="https://twitter.com/denizlerbilisim/" target="_blank" rel="noopener" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="none"><path d="M4 4l7.5 9.4L4.4 20H7l5.2-5.4L16.5 20H20l-8-10 7-6h-2.5l-4.7 4.9L8 4H4Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Menü</h4>
+      <a href="index.html">Anasayfa</a>
+      <a href="hakkimizda.html">Hakkımızda</a>
+      <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+      <a href="ik.html">İK</a>
+      <a href="iletisim.html">İletişim</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>İletişim</h4>
+      <p class="footer-contact">
+        Telefon: <a href="tel:+903922280960">+90 392 228 09 60</a> / <a href="tel:+905488662279">0548 866 22 79</a><br>
+        Faks: 0090 392 228 32 76<br>
+        Adres: Mehmet Ertuğruloğlu Sokak, No:10, D-4, Kumsal, Lefkoşa, Kuzey Kıbrıs
+      </p>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> Denizler Bilişim Hizmetleri &nbsp;·&nbsp;
+       <a href="gizlilik-politikasi.html">Gizlilik Politikası</a> &nbsp;·&nbsp;
+       <a href="online-odeme.html">Online Ödeme</a>
+    </p>
+    <button class="to-top" id="toTop" aria-label="Yukarı çık">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
