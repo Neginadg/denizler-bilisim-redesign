@@ -92,6 +92,16 @@ svg{ max-width:100%; }
 .nav-toggle{ display:none; flex-direction:column; gap:5px; width:26px; }
 .nav-toggle span{ height:2px; background:var(--navy); border-radius:2px; transition:all .3s; }
 
+/* ============ LANGUAGE SWITCH ============ */
+.lang-switch{ display:flex; align-items:center; background:var(--pale); border-radius:50px; padding:3px; gap:2px; }
+.lang-switch button{
+  border:none; background:transparent; font-family:inherit; font-size:12.5px; font-weight:700;
+  color:var(--gray); padding:6px 12px; border-radius:50px; cursor:pointer; transition:all .25s var(--ease);
+  letter-spacing:.02em;
+}
+.lang-switch button.active{ background:var(--cyan); color:#fff; box-shadow:0 4px 12px rgba(0,174,239,.3); }
+.lang-switch button:not(.active):hover{ color:var(--cyan-dark); }
+
 /* ============ HERO ============ */
 .hero{ position:relative; padding:150px 0 0; overflow:hidden; background:var(--bg); }
 .hero-bg{ position:absolute; inset:0; z-index:0; }

@@ -48,3 +48,36 @@ toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smoot
 // ===== Footer year =====
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// ===== Language switch (TR/EN) =====
+const LANG_KEY = 'db_lang';
+const langButtons = document.querySelectorAll('.lang-switch button');
+const textNodes = document.querySelectorAll('[data-en]');
+const altNodes = document.querySelectorAll('[data-en-alt]');
+const titleEl = document.querySelector('title[data-en]');
+const descEl = document.querySelector('meta[name="description"][data-en]');
+
+textNodes.forEach(el => { if (el.dataset.tr === undefined) el.dataset.tr = el.innerHTML; });
+altNodes.forEach(el => { if (el.dataset.trAlt === undefined) el.dataset.trAlt = el.getAttribute('alt') || ''; });
+if (titleEl && titleEl.dataset.tr === undefined) titleEl.dataset.tr = titleEl.textContent;
+if (descEl && descEl.dataset.tr === undefined) descEl.dataset.tr = descEl.getAttribute('content') || '';
+
+function applyLang(lang){
+  document.documentElement.lang = lang;
+  textNodes.forEach(el => { el.innerHTML = lang === 'en' ? el.dataset.en : el.dataset.tr; });
+  altNodes.forEach(el => { el.setAttribute('alt', lang === 'en' ? el.dataset.enAlt : el.dataset.trAlt); });
+  if (titleEl) document.title = lang === 'en' ? titleEl.dataset.en : titleEl.dataset.tr;
+  if (descEl) descEl.setAttribute('content', lang === 'en' ? descEl.dataset.en : descEl.dataset.tr);
+  langButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+  localStorage.setItem(LANG_KEY, lang);
+}
+
+langButtons.forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+});
+
+let savedLang = 'tr';
+try { savedLang = localStorage.getItem(LANG_KEY) || 'tr'; } catch (e) {}
+const urlLang = new URLSearchParams(window.location.search).get('lang');
+if (urlLang === 'en' || urlLang === 'tr') savedLang = urlLang;
+applyLang(savedLang);
+
