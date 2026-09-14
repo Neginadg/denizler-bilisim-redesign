@@ -134,7 +134,7 @@
   </section>
 
   <!-- ===== BİZE ULAŞIN (FORM) ===== -->
-  <!-- NOTE: front-end only demo form — not yet wired to a mail service or backend. -->
+  <!-- Submits to /api/contact (Vercel serverless function -> Resend). See api/contact.js. -->
   <section class="section" id="bize-ulasin">
     <div class="container">
       <div class="section-head" data-reveal>
@@ -144,11 +144,13 @@
 
       <form class="contact-form" id="contactForm" data-reveal>
         <div class="form-row">
-          <input type="text" data-en-placeholder="Full Name" placeholder="İsim &amp; Soyisim" required>
-          <input type="email" data-en-placeholder="Email Address" placeholder="E-posta Adresi" required>
+          <input type="text" name="name" id="cfName" data-en-placeholder="Full Name" placeholder="İsim &amp; Soyisim" required>
+          <input type="email" name="email" id="cfEmail" data-en-placeholder="Email Address" placeholder="E-posta Adresi" required>
         </div>
-        <textarea rows="6" data-en-placeholder="Message" placeholder="Mesaj" required></textarea>
-        <button type="submit" class="btn btn-primary" data-en="SEND">GÖNDER</button>
+        <textarea rows="6" name="message" id="cfMessage" data-en-placeholder="Message" placeholder="Mesaj" required></textarea>
+        <!-- honeypot: hidden from real visitors, only bots fill this in -->
+        <input type="text" name="company" id="cfHoneypot" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" aria-hidden="true">
+        <button type="submit" class="btn btn-primary" id="cfSubmit" data-en="SEND">GÖNDER</button>
         <p class="form-note" id="formNote" aria-live="polite"></p>
       </form>
     </div>

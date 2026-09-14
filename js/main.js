@@ -84,16 +84,49 @@ const urlLang = new URLSearchParams(window.location.search).get('lang');
 if (urlLang === 'en' || urlLang === 'tr') savedLang = urlLang;
 applyLang(savedLang);
 
-// ===== Contact form (front-end only demo — no backend/mail service wired up yet) =====
+// ===== Contact form (posts to the /api/contact serverless function, which relays via Resend) =====
 const contactForm = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
-if (contactForm && formNote) {
-  contactForm.addEventListener('submit', (e) => {
+const cfSubmit = document.getElementById('cfSubmit');
+
+const CF_MESSAGES = {
+  sending: { tr: 'Gönderiliyor…', en: 'Sending…' },
+  success: { tr: 'Teşekkürler — mesajınız alındı. En kısa sürede size dönüş yapacağız.', en: 'Thank you — your message has been received. We\'ll get back to you soon.' },
+  error: { tr: 'Bir sorun oluştu, mesajınız gönderilemedi. Lütfen tekrar deneyin veya bizi doğrudan arayın.', en: 'Something went wrong and your message wasn\'t sent. Please try again or call us directly.' },
+};
+
+function setFormNote(key) {
+  const lang = document.documentElement.lang === 'en' ? 'en' : 'tr';
+  formNote.textContent = CF_MESSAGES[key][lang];
+}
+
+if (contactForm && formNote && cfSubmit) {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    formNote.textContent = document.documentElement.lang === 'en'
-      ? 'Thank you — your message has been received. (Demo form: not yet connected to email.)'
-      : 'Teşekkürler — mesajınız alındı. (Demo form: henüz e-postaya bağlı değil.)';
-    contactForm.reset();
+    const name = document.getElementById('cfName').value.trim();
+    const email = document.getElementById('cfEmail').value.trim();
+    const message = document.getElementById('cfMessage').value.trim();
+    const company = document.getElementById('cfHoneypot').value; // honeypot
+
+    cfSubmit.disabled = true;
+    setFormNote('sending');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message, company }),
+      });
+
+      if (!res.ok) throw new Error('request failed');
+
+      setFormNote('success');
+      contactForm.reset();
+    } catch (err) {
+      setFormNote('error');
+    } finally {
+      cfSubmit.disabled = false;
+    }
   });
 }
 

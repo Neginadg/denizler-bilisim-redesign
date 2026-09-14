@@ -8,3 +8,9 @@ Thumbs.db
 
 # Local preview artifacts
 /shots/
+
+# Vercel
+.vercel
+
+# Node
+node_modules/

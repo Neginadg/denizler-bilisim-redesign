@@ -1,0 +1,6 @@
+{
+  "name": "denizler-bilisim-redesign",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Denizler Bilisim Hizmetleri Ltd. website (static site + a Vercel serverless function for the contact form)"
+}

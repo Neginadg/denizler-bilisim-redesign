@@ -267,6 +267,7 @@ svg{ max-width:100%; }
 .about-hero-copy h1{ font-size:clamp(32px,4vw,46px); margin-bottom:18px; }
 .about-hero-copy p{ color:var(--gray); font-size:17px; max-width:460px; }
 .about-hero-visual img{ width:100%; }
+.about-hero-visual.framed img{ border-radius:var(--radius); box-shadow:var(--shadow-soft); }
 
 /* ============ SERVICES HERO (full-bleed photo — distinct from the homepage and about-us heroes) ============ */
 .hero-photo{
