@@ -310,6 +310,9 @@ svg{ max-width:100%; }
 .text-block h3{ font-size:18px; margin:28px 0 10px; }
 .text-block h3:first-child{ margin-top:0; }
 .text-block p{ color:var(--gray); font-size:16px; margin-bottom:14px; }
+.text-block ul{ list-style:disc; padding-left:22px; margin-bottom:14px; }
+.text-block li{ color:var(--gray); font-size:16px; margin-bottom:8px; }
+.text-block li a{ color:var(--cyan-dark); }
 
 .grid-2{ grid-template-columns:repeat(2,1fr); max-width:900px; margin:0 auto; }
 .panel-card{
@@ -340,6 +343,10 @@ svg{ max-width:100%; }
   flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--cyan); color:#fff; font-size:13px;
   display:flex; align-items:center; justify-content:center;
 }
+
+.reason-grid{ max-width:none; }
+.reason-item{ display:flex; align-items:flex-start; gap:14px; }
+.reason-item p{ color:var(--navy); font-weight:500; font-size:15px; margin:0; line-height:1.5; }
 
 /* ============ VALUES BAND (dark) ============ */
 .values-band{
